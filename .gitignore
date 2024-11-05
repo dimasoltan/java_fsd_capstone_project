@@ -1,0 +1,9 @@
+.idea
+
+backend/eureka-server/target
+backend/backend-micro-service/target
+backend/.metadata
+
+
+frontend/node_modules
+frontend/build
