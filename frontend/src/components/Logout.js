@@ -1,18 +1,19 @@
-import { useNavigate } from "react-router-dom";
+import React from 'react';
+import {useNavigate} from 'react-router-dom';
 
 function Logout() {
+  const navigate = useNavigate();
 
-let navigate = useNavigate();
-
-let handleLogout= ()=> {
+  const handleLogout = () => {
     sessionStorage.removeItem("user");
-    navigate("/")
-}
-    return(
-        <div>
-            <input type="button" value="logout" onClick={handleLogout}/>
-        </div>
-    )
+    navigate("/");
+  };
+
+  return (
+    <button onClick={handleLogout} className="btn btn-danger w-10">
+      Logout
+    </button>
+  );
 }
 
 export default Logout;
